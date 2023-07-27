@@ -1,0 +1,21 @@
+<!-- customer.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>List of Customers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let customer of customers" [routerLink]="['/customerEdit', customer._id]">
+      <ion-label>
+        <h2>{{ customer.cFirstName }} {{ customer.cLastName }}</h2>
+        <p>Phone: {{ customer.cPhone }}</p>
+        <p>Address: {{ customer.cStreet }}, {{ customer.cZipCode }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

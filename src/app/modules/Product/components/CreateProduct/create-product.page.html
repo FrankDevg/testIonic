@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Crear Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Campos para ingresar los datos del producto -->
+    <ion-item>
+      <ion-label>UPC</ion-label>
+      <ion-input [(ngModel)]="newProduct.uPC" placeholder="UPC"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nombre del Producto</ion-label>
+      <ion-input [(ngModel)]="newProduct.prodName" placeholder="Nombre del Producto"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>MgGr</ion-label>
+      <ion-input [(ngModel)]="newProduct.mgGr" placeholder="MgGr"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Modelo</ion-label>
+      <ion-input [(ngModel)]="newProduct.model" placeholder="Modelo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Precio de Lista por Unidad</ion-label>
+      <ion-input [(ngModel)]="newProduct.unitListPrice" placeholder="Precio de Lista por Unidad"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Unidades en Stock</ion-label>
+      <ion-input [(ngModel)]="newProduct.unitsInStock" placeholder="Unidades en Stock"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="createProduct()">Crear Producto</ion-button>
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>List of Orders</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let order of orders" [routerLink]="['/orderEdit', order.id]">
+      <ion-label>
+        <h2>{{ order.orderDate | date }}</h2>
+        <p>Sold By: {{ order.soldBy }}</p>
+        <p>Total: {{ order.total }}</p>
+        <p>MgGr: {{ order.mgGr }}</p>
+        <p>Customer ID: {{ order.customerId }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

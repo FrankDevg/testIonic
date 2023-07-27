@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Product</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>ID:</ion-label>
+        <ion-input [(ngModel)]="product._id" disabled></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>UPC:</ion-label>
+        <ion-input [(ngModel)]="product.uPC"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Product Name:</ion-label>
+        <ion-input [(ngModel)]="product.prodName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>MgGr:</ion-label>
+        <ion-input [(ngModel)]="product.mgGr"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Model:</ion-label>
+        <ion-input [(ngModel)]="product.model"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Unit List Price:</ion-label>
+        <ion-input [(ngModel)]="product.unitListPrice"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Units In Stock:</ion-label>
+        <ion-input [(ngModel)]="product.unitsInStock"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" (click)="updateProduct()">Update Product</ion-button>
+</ion-content>

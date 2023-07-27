@@ -1,0 +1,7 @@
+{
+  "name": "microfrontOrderManagement",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

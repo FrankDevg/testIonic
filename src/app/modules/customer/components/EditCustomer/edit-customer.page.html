@@ -1,0 +1,47 @@
+<!-- edit-customer.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Customer</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>ID:</ion-label>
+        <ion-input [(ngModel)]="customer._id" disabled></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>First Name:</ion-label>
+        <ion-input [(ngModel)]="customer.cFirstName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Last Name:</ion-label>
+        <ion-input [(ngModel)]="customer.cLastName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Phone:</ion-label>
+        <ion-input [(ngModel)]="customer.cPhone"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Street:</ion-label>
+        <ion-input [(ngModel)]="customer.cStreet"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Zip Code:</ion-label>
+        <ion-input [(ngModel)]="customer.cZipCode"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" (click)="updateCustomer()">Update Customer</ion-button>
+</ion-content>

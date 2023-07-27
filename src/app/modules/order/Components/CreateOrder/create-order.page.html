@@ -1,0 +1,37 @@
+<!-- create-order.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Crear Orden</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Campos para ingresar los datos de la orden -->
+    <ion-item>
+      <ion-label>Fecha de la Orden</ion-label>
+      <ion-datetime displayFormat="DD/MM/YYYY HH:mm" [(ngModel)]="newOrder.orderDate"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-label>Vendido por</ion-label>
+      <ion-input [(ngModel)]="newOrder.soldBy" placeholder="Vendido por"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Total</ion-label>
+      <ion-input type="number" [(ngModel)]="newOrder.total" placeholder="Total"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>MgGr</ion-label>
+      <ion-input [(ngModel)]="newOrder.mgGr" placeholder="MgGr"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>CustomerId</ion-label>
+      <ion-input [(ngModel)]="newOrder.customerId" placeholder="CustomerId"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="createOrder()">Crear Orden</ion-button>
+</ion-content>

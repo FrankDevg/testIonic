@@ -1,0 +1,47 @@
+<!-- edit-order.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Order</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>ID:</ion-label>
+        <ion-input [(ngModel)]="order.id" disabled></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Order Date:</ion-label>
+        <ion-datetime display-format="MMM DD, YYYY" [(ngModel)]="order.orderDate"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Sold By:</ion-label>
+        <ion-input [(ngModel)]="order.soldBy"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Total:</ion-label>
+        <ion-input [(ngModel)]="order.total" type="number"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>MgGr:</ion-label>
+        <ion-input [(ngModel)]="order.mgGr"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Customer ID:</ion-label>
+        <ion-input [(ngModel)]="order.customerId"></ion-input>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-button expand="full" (click)="updateOrder()">Update Order</ion-button>
+</ion-content>

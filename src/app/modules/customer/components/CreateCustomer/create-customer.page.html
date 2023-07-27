@@ -1,0 +1,37 @@
+<!-- create-customer.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Crear Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Campos para ingresar los datos del cliente -->
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input [(ngModel)]="newCustomer.cFirstName" placeholder="Nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellido</ion-label>
+      <ion-input [(ngModel)]="newCustomer.cLastName" placeholder="Apellido"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Teléfono</ion-label>
+      <ion-input [(ngModel)]="newCustomer.cPhone" placeholder="Teléfono"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dirección</ion-label>
+      <ion-input [(ngModel)]="newCustomer.cStreet" placeholder="Dirección"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Código Postal</ion-label>
+      <ion-input [(ngModel)]="newCustomer.cZipCode" placeholder="Código Postal"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="createCustomer()">Crear Cliente</ion-button>
+</ion-content>

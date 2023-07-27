@@ -1,0 +1,24 @@
+<!-- product.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>List of Products</ion-title> <!-- Cambiar el título para que refleje productos -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Utilizar un *ngFor para iterar sobre la lista de productos en lugar de clientes -->
+    <ion-item *ngFor="let product of products" [routerLink]="['/productEdit', product._id]">
+      <ion-label>
+        <h2>{{ product.prodName }}</h2> <!-- Mostrar el nombre del producto en lugar del nombre del cliente -->
+        <p>UPC: {{ product.uPC }}</p> <!-- Mostrar el código UPC en lugar del teléfono del cliente -->
+        <p>Model: {{ product.model }}</p> <!-- Mostrar el modelo del producto en lugar de la dirección del cliente -->
+        <p>Price: {{ product.unitListPrice | currency }}</p> <!-- Mostrar el precio del producto en lugar del código postal del cliente -->
+        <p>Stock: {{ product.unitsInStock }}</p> <!-- Mostrar la cantidad de unidades en stock en lugar de la ciudad del cliente -->
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
